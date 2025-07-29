@@ -78,7 +78,7 @@ This is the frontend that users see in their web browser:
 
   <script>
     const log = document.getElementById("log");
-    const ws = new WebSocket("ws://192.168.226.96:8800/ws/logs");
+    const ws = new WebSocket("ws://localhost:8800/ws/logs");
 
     ws.onmessage = (event) => {
       log.textContent += event.data + "\n";
