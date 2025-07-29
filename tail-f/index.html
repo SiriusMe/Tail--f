@@ -1,0 +1,17 @@
+<!-- test_client.html -->
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Log Viewer</h2>
+  <pre id="log"></pre>
+
+  <script>
+    const log = document.getElementById("log");
+    const ws = new WebSocket("ws://localhost:8880/ws/logs");
+
+    ws.onmessage = (event) => {
+      log.textContent += event.data + "\n";
+    };
+  </script>
+</body>
+</html>
